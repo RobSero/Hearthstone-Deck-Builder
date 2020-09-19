@@ -1,5 +1,6 @@
 import React from 'react'
 import CSS from 'csstype'
+import {Link} from 'react-router-dom'
 
 const LandingPage: React.FC = () => {
   const [mouseXposition, setX] = React.useState('50%')
@@ -14,10 +15,11 @@ const LandingPage: React.FC = () => {
       <div id='right-border'></div>
       <div id='top-border'></div>
       <div id='bottom-border'></div>
-      <button className='start-button'>Start Building</button>
+      <Link to='/decks' className='start-button'>Start Building</Link>
       <div className='page-container'>
         <div className='landing-header'>
-          {mouseXposition}
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600526924/logo_je8112.png' alt='logo' className='main-logo' />
+          <h1>Super Quick Deck Builder</h1>
         </div>
 
         <div className='left-view' style={{ width: mouseXposition }}>
@@ -33,7 +35,7 @@ const LandingPage: React.FC = () => {
         </div>
 
         <div className='right-view'>
-          <div className='cards-flex'>
+        
             <img className='card-image animate__bounceInRight animate__animated' src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600525467/cardTest_jeynmb.png' />
 
             <img className={parseInt(mouseXposition) < 900? 'card-image animate__bounceInRight animate__animated' : 'card-image animate__bounceOutRight animate__animated' } src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600525467/cardTest_jeynmb.png' /> 
@@ -42,11 +44,11 @@ const LandingPage: React.FC = () => {
 
             <img className={parseInt(mouseXposition) < 300? 'card-image animate__bounceInRight animate__animated' : 'card-image animate__bounceOutRight animate__animated' } src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600525467/cardTest_jeynmb.png' /> 
 
-            <img className={parseInt(mouseXposition) < 50? 'card-image animate__bounceInRight animate__animated' : 'card-image animate__bounceOutRight animate__animated' } src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600525467/cardTest_jeynmb.png' /> 
+            <img className={parseInt(mouseXposition) < 100? 'card-image animate__bounceInRight animate__animated' : 'card-image animate__bounceOutRight animate__animated' } src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600525467/cardTest_jeynmb.png' /> 
           </div>
         </div>
 
-      </div>
+      
     </div>
   )
 }

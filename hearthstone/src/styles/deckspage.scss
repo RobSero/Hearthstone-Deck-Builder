@@ -1,0 +1,21 @@
+.class-container {
+  text-align: center;
+
+  .class-title {
+    margin: 5px;
+  }
+
+  .class-flex {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0 auto;
+
+    .class-name {
+      margin: 0;
+    }
+    .class-icon {
+      width: 70px;
+    }
+  }
+}

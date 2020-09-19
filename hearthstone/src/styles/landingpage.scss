@@ -1,18 +1,31 @@
 .landing-header {
   height: 300px;
   background-color: red;
+  text-align: center;
+
+  .main-logo {
+    height: 150px;
+  }
 }
 
 .start-button {
   position: fixed;
   margin: 0 auto;
+  padding: 15px;
+  text-align: center;
   left: 0;
   right: 0;
   top: 50%;
   width: 150px;
-  height: 40px;
   background-color: yellow;
   z-index: 10;
+  text-decoration: none;
+  border-radius: 7px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    box-shadow: 0 0 10px white;
+  }
 }
 
 
@@ -32,6 +45,7 @@
     width: 100vw;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    overflow: hidden;
   
     .characters {
       width: 200px;
@@ -45,7 +59,6 @@
   z-index: -2;
   height: 400px;
   width: 100vw;  
-
 
 .card-image {
   width: 200px;

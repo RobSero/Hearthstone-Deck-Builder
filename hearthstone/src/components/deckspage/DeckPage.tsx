@@ -1,12 +1,34 @@
 import React from 'react'
+import ClassContainer from './ClassContainer'
+
 
 const DeckPage: React.FC = () => {
+
+
+
+const classSelected = (e:string) => {
+  console.log(e);
+  
+}
+
+
 return (
   <div>
-    <h1>Deck Page here</h1>
-    <img src='https://d15f34w2p8l1cc.cloudfront.net/hearthstone/60cc0989fb39c22c03791ec3056a0ce4aaf947d185ce3c29ff5f97368ab119a4.png' alt='test'/>
+     <div id='left-border'></div>
+      <div id='right-border'></div>
+      <div id='top-border'></div>
+      <div id='bottom-border'></div>
+      <div className='page-container background-standard'>
+        {/* CLASSES SECTION */}
+     <ClassContainer classSelected = {classSelected} />
+
+      </div>
   </div>
 )
 }
 
 export default DeckPage
+
+
+//  click on class to fire function
+// function get 
