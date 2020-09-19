@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+// BORDER STYLING
+
+#left-border, #right-border, #top-border, #bottom-border {
+  background-color: green;
+  position: fixed;
+}
+
+#left-border,#right-border {
+  top: 0;
+  bottom: 0;
+  width: 50px;
+}
+
+#top-border,#bottom-border {
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+#top-border {
+  top: 0;
+}
+#bottom-border {
+  bottom: 0;
+}
+#left-border {
+  left: 0;
+}
+#right-border {
+  right: 0;
+}
+
+
+// PAGE CONTAINER STYLING
+.page-container {
+  padding: 50px;
+}

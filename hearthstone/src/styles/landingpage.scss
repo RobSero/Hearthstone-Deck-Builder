@@ -1,0 +1,26 @@
+.landing-header {
+  height: 300px;
+  background-color: red;
+}
+
+.left-view {
+  background: brown;
+  height: 400px;
+  float: left;
+}
+.right-view {
+  background: yellow;
+  height: 400px;
+  right: 200px;
+}
+
+.start-button {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 150px;
+  height: 40px;
+  background-color: yellow;
+}
