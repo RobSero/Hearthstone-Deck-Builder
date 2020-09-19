@@ -1,14 +1,21 @@
 import React from 'react'
 import ClassContainer from './ClassContainer'
-
+import {getCardData} from '../../lib/api'
 
 const DeckPage: React.FC = () => {
+const [testdata, setCards] = React.useState(undefined)
 
 
-
-const classSelected = (e:string) => {
+const classSelected = async(e:string) => {
   console.log(e);
-  
+  try {
+    const res = await getCardData(e)
+    setCards(res.data)
+    
+  } catch(err) {
+    console.log(err.message);
+    
+  }
 }
 
 
