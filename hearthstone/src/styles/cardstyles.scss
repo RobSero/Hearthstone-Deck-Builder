@@ -1,0 +1,60 @@
+//  CARD RARITY COLOURS
+// common quality
+.rarity-1, .rarity-2 {
+  color: white;
+}
+// rare quality
+.rarity-3 {
+  color: rgb(33, 20, 211);
+}
+// epic quality
+.rarity-4 {
+  color: rgb(144, 31, 172);
+}
+// legendary quality
+.rarity-5 {
+  color: rgb(192, 135, 11);
+}
+
+.card-list-container {
+  width: 400px;
+  text-align: center;
+  
+  .card-list-title {
+    
+  }
+}
+
+.card-list {
+  text-align: left;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.card-container {
+  background-color: rgb(182, 143, 117);
+  padding: 5px;
+  margin: 2px;
+}
+
+.card-cost {
+  background-color: blue;
+  color: white;
+  width: 23px;
+  height: 23px;
+  text-align: center;
+  display: inline-block;
+}
+
+.card-name {
+  display: inline-block;
+  margin: 5px;
+}
+
+
+//  POP UP CARD STYLING
+
+.card-popup {
+  position: fixed;
+  height: 400px;
+}
