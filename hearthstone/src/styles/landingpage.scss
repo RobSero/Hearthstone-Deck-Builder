@@ -3,17 +3,6 @@
   background-color: red;
 }
 
-.left-view {
-  background: brown;
-  height: 400px;
-  float: left;
-}
-.right-view {
-  background: yellow;
-  height: 400px;
-  right: 200px;
-}
-
 .start-button {
   position: fixed;
   margin: 0 auto;
@@ -23,4 +12,48 @@
   width: 150px;
   height: 40px;
   background-color: yellow;
+  z-index: 10;
 }
+
+
+// LOWER PAGE MOUSEMOVE EFFECT
+
+.left-view {
+  background: brown;
+  height: 400px;
+  float: left;
+  overflow: hidden;
+  z-index: 1;
+  white-space:nowrap;
+  transition: all 0.5s ease;
+
+  .character-flex {
+    display: flex;
+    width: 100vw;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  
+    .characters {
+      width: 200px;
+    }
+  }
+}
+
+
+.right-view {
+  background: yellow;
+  z-index: -2;
+  height: 400px;
+  width: 100vw;  
+
+
+.card-image {
+  width: 200px;
+}
+}
+
+
+
+
+
+
