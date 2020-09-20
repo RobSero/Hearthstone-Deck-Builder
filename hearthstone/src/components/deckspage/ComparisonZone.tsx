@@ -1,11 +1,18 @@
 import React from 'react'
 
 interface Props {
-  selectedCard: CardDetails
+  selectedCard: CardDetails,
+  selectedUserCard: CardDetails,
+  addCard(card:CardDetails): void
+  removeCard(card:CardDetails): void
 }
 
 interface CardDetails {
-  image:string
+  id: number,
+  manaCost: number,
+  image: string,
+  rarityId: number,
+  name: string
 }
 
 function ComparisonZone(props:Props){
@@ -21,10 +28,14 @@ function ComparisonZone(props:Props){
         
       </div>
       <div className='central-info'>
-        <p>Drag over to add to deck</p>
+        <p onClick={()=> {props.addCard(props.selectedCard)}}>add to deck</p>
+        <p onClick={()=> {props.removeCard(props.selectedUserCard)}}>remove deck</p>
       </div>
       <div className='card-compare'>
-        <img className='main-card no-card' src="https://res.cloudinary.com/dy7eycl8m/image/upload/v1600525467/cardTest_jeynmb.png" alt='card two' />
+      {!props.selectedUserCard.image? 
+        <img className='main-card no-card' src="https://res.cloudinary.com/dy7eycl8m/image/upload/v1600525467/cardTest_jeynmb.png" alt='card one' /> :
+        <img className='main-card' src={props.selectedUserCard.image} alt='card one' />
+        }
       </div>
     </div>
   )
