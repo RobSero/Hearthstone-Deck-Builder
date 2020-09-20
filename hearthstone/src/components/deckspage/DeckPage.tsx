@@ -7,6 +7,9 @@ import UserCardList from './UserCardList'
 import CardPopup from './CardPopup'
 import Borders from '../common/Borders'
 
+
+
+
 interface CardDetails {
   id: number,
   manaCost: number,
@@ -15,15 +18,18 @@ interface CardDetails {
   name: string
 }
 
+
+
 const DeckPage: React.FC = () => {
 const [cardList, setCards] = React.useState([{id: 0, name:'', manaCost: 0, rarityId: 1, image: ''}])
-const [selectedClass, setClass] = React.useState('none')
+const [selectedClass, setClass] = React.useState('')
 const [cardPopUpSource, setCardSource] = React.useState('')
 const [selectedCard, setCard] = React.useState<CardDetails>({id: 0, name:'', manaCost: 0, rarityId: 1, image: ''})
 const [selectedUserCard, setUserCard] = React.useState<CardDetails>({id: 0, name:'', manaCost: 0, rarityId: 1, image: ''})
 const [userDeck, setUserDeck] = React.useState<CardDetails[]>([{id: 0, name:'', manaCost: 0, rarityId: 1, image: ''}])
 
 const classSelected = async(e:string) => {
+  setUserDeck([])
   console.log(e);
   try {
     const res = await getCardData(e)
@@ -40,7 +46,6 @@ const classSelected = async(e:string) => {
     setClass(e.charAt(0).toUpperCase() + e.slice(1))
   } catch(err) {
     console.log(err.message);
-    
   }
 }
 
@@ -57,6 +62,7 @@ const removeCard = (removedCard:CardDetails) => {
     setUserDeck(newUserDeck)
 }
 
+
 return (
   <div>
      <Borders />
@@ -69,8 +75,9 @@ return (
     {/* CARD LIST SECTION */}
     <div className='decks-flex'>
     <CardList cardList={cardList} selectedClass={selectedClass} setCardSource={setCardSource} setCard={setCard}  />
-  <ComparisonZone selectedCard={selectedCard} selectedUserCard={selectedUserCard}  addCard={addCard} removeCard={removeCard}/>
-  <UserCardList userDeck={userDeck} setCardSource={setCardSource} setUserCard={setUserCard} />
+  <ComparisonZone selectedClass={selectedClass} selectedCard={selectedCard} selectedUserCard={selectedUserCard}  addCard={addCard} removeCard={removeCard}/>
+  <UserCardList selectedClass={selectedClass} userDeck={userDeck} setCardSource={setCardSource} setUserCard={setUserCard} />
+
     </div>
    
       </div>

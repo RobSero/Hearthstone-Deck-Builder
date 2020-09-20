@@ -11,6 +11,20 @@
   }
 }
 
+.speech {
+  position: fixed;
+  width: 300px;
+  top: 150px;
+  left: 50px;
+}
+
+.speech-right {
+  position: fixed;
+  width: 300px;
+  top: 80px;
+  right: 50px;
+}
+
 .start-button {
   position: fixed;
   margin: 0 auto;

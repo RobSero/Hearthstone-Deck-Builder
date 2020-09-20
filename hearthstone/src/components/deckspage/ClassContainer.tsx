@@ -7,7 +7,7 @@ interface ClickEvent {
 
 const ClassContainer = (props: ClickEvent) => {
   return (
-    <div className='class-container'>
+    <div className='class-container animate__animated animate__fadeInDown'>
       <h3 className='class-title'>Choose a class</h3>
       <div className='class-flex'>
         {/* DEMON HUNTER */}
@@ -15,7 +15,7 @@ const ClassContainer = (props: ClickEvent) => {
           <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619777/pngwave_41_iywqvs.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('demonhunter')
           }} />
-          <p className='class-name class-DH'>Demon Hunter</p>
+          <p className='class-name class-demonhunter'>Demonhunter</p>
         </div>
 
             {/* DRUID */}

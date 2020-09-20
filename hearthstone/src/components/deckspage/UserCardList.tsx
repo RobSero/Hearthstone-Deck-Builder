@@ -3,6 +3,7 @@ import React from 'react'
 
 interface Props {
   userDeck: Card[],
+  selectedClass: string
   setCardSource(image:string): void,
   setUserCard(card:Card): void
 }
@@ -16,12 +17,21 @@ interface Card {
 }
 
 function UserCardList(props:Props){
-    const {userDeck, setCardSource, setUserCard} = props
+  const [newCardAnimate, toggleAnimate] = React.useState(false)
+    const {userDeck, setCardSource, setUserCard, selectedClass} = props
+
+  React.useEffect(()=> {
+    toggleAnimate(true)
+    setTimeout(()=> {
+      toggleAnimate(false)
+    }, 500)
+  },[userDeck])
+
     return (
-      <div className='card-list-container'>
-        <h3 className='card-list-title'>Your Deck</h3>
+      <div className={selectedClass? 'card-list-container animate__animated animate__fadeInRight glow-transition':'card-list-container hide glow-transition' } style={newCardAnimate? animateFlash : removeAnimate}>
+        <h3 className='card-list-title' style={newCardAnimate? {fontWeight: 700} : {fontWeight: 400} }>Your Deck ({userDeck.length}/30)</h3>
         <ul className='card-list'>
-          {userDeck ? userDeck.map((card:Card) => {
+          {userDeck.length !== 0 ? userDeck.map((card:Card) => {
             return (
               <li key={Math.random()}>
                 <div className='card-container' 
@@ -33,12 +43,17 @@ function UserCardList(props:Props){
                 </div>
               </li>
             )
-          }) : ''} 
+          }) : <p className='warning-text'>Changing your class will reset your deck hehe. Cant be mixing!</p>} 
+          
         </ul>
       </div>
     )
-  
 }
+
+const animateFlash = {
+  boxShadow: "0 0 40px white"
+}
+const removeAnimate = {}
 
 
 export default UserCardList

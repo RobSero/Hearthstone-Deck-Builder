@@ -19,7 +19,7 @@ interface Card {
 function CardList(props:Props){
     const {cardList, selectedClass, setCardSource,setCard} = props
     return (
-      <div className='card-list-container'>
+      <div className={selectedClass? 'card-list-container animate__animated animate__fadeInLeft':'card-list-container hide' }>
         <h3 className='card-list-title'>Available <span className={`class-${selectedClass.toLowerCase()}`}>{selectedClass}</span> Cards</h3>
         <ul className='card-list'>
           {cardList ? cardList.map((card:Card) => {

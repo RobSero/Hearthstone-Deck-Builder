@@ -1,7 +1,8 @@
 import React from 'react'
-import CSS from 'csstype'
 import {Link} from 'react-router-dom'
 import Borders from '../common/Borders'
+import SpeechOne from '../common/SpeechOne'
+import SpeechTwo from '../common/SpeechTwo'
 
 const LandingPage: React.FC = () => {
   const [mouseXposition, setX] = React.useState('50%')
@@ -10,13 +11,16 @@ const LandingPage: React.FC = () => {
     setX(e.clientX)
   }
 
+
   return (
     <div onMouseMove={trackMouse}>
       <Borders />
+      <SpeechOne />
+      <SpeechTwo />
       <Link to='/decks' className='start-button'>Start Building</Link>
       <div className='page-container'>
         <div className='landing-header'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600526924/logo_je8112.png' alt='logo' className='main-logo' />
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600526924/logo_je8112.png' alt='logo' className='main-logo animate__zoomInUp animate__animated' />
           <h1>Super Quick Deck Builder</h1>
         </div>
 
