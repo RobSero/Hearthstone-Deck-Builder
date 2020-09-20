@@ -1,6 +1,7 @@
 import React from 'react'
 import CSS from 'csstype'
 import {Link} from 'react-router-dom'
+import Borders from '../common/Borders'
 
 const LandingPage: React.FC = () => {
   const [mouseXposition, setX] = React.useState('50%')
@@ -11,10 +12,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <div onMouseMove={trackMouse}>
-      <div id='left-border'></div>
-      <div id='right-border'></div>
-      <div id='top-border'></div>
-      <div id='bottom-border'></div>
+      <Borders />
       <Link to='/decks' className='start-button'>Start Building</Link>
       <div className='page-container'>
         <div className='landing-header'>
@@ -25,9 +23,9 @@ const LandingPage: React.FC = () => {
         <div className='left-view' style={{ width: mouseXposition }}>
           <div className='character-flex'>
             <img className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600523790/testChar_k5dhho.png' alt='hearthstone character' />
-            <img className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600523790/testChar_k5dhho.png' alt='hearthstone character' />
-            <img className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600523790/testChar_k5dhho.png' alt='hearthstone character' />
-            <img className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600523790/testChar_k5dhho.png' alt='hearthstone character' />
+            <img className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600627927/pngwave_56_xx0k3i.png' alt='hearthstone character' />
+            <img className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600627905/pngwave_55_xx49zi.png' alt='hearthstone character' />
+            <img className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600627906/pngwave_54_pkklmq.png' alt='hearthstone character' />
            
             
           </div>

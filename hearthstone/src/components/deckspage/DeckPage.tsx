@@ -5,6 +5,7 @@ import CardList from './CardList'
 import ComparisonZone from './ComparisonZone'
 import UserCardList from './UserCardList'
 import CardPopup from './CardPopup'
+import Borders from '../common/Borders'
 
 interface CardDetails {
   id: number,
@@ -58,10 +59,7 @@ const removeCard = (removedCard:CardDetails) => {
 
 return (
   <div>
-     <div id='left-border'></div>
-      <div id='right-border'></div>
-      <div id='top-border'></div>
-      <div id='bottom-border'></div>
+     <Borders />
       <div className='page-container background-standard'>
         {/* CARD IMAGE POPUP */}
         <CardPopup cardPopUpSource={cardPopUpSource} />

@@ -11,6 +11,7 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
   // box-shadow: 0 0 10px grey;
   position: fixed;
+  z-index: 5
 }
 
 #left-border,#right-border {

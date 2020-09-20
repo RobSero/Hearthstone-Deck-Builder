@@ -4,6 +4,8 @@
   background-image: url("https://res.cloudinary.com/dy7eycl8m/image/upload/v1600622071/pngwave_49_uvoxyj.png");
   text-align: center;
   color: white;
+  box-shadow: 0 0 0 30px green;
+  z-index: 4;
   .main-logo {
     height: 150px;
   }
@@ -23,6 +25,10 @@
   text-decoration: none;
   border-radius: 7px;
   transition: all 0.5s ease;
+  box-shadow: 0 3px 3px 3px rgba(161, 163, 161, 0.315);
+  border-style: groove;
+  border-width: 4px;
+  border-color: rgb(192, 168, 137);
 
   &:hover {
     box-shadow: 0 0 10px white;
@@ -33,13 +39,19 @@
 // LOWER PAGE MOUSEMOVE EFFECT
 
 .left-view {
-  background: brown;
+  background-image: url('https://res.cloudinary.com/dy7eycl8m/image/upload/v1600627381/pngwave_52_cbhh2j.png');
   height: 400px;
   float: left;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
   white-space:nowrap;
   transition: all 0.5s ease;
+  box-shadow: inset 0 0 200px rgb(158, 4, 4);
+
+  border-right: groove;
+  border-width: 7px;
+  border-color: rgb(192, 168, 137);
+  
 
   .character-flex {
     display: flex;
@@ -47,19 +59,29 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
     overflow: hidden;
+    padding-top: 120px;
   
     .characters {
       width: 200px;
+      position: relative;
+      bottom: 0;
     }
   }
 }
 
 
 .right-view {
-  background: yellow;
   z-index: -2;
   height: 400px;
-  width: 100vw;  
+  width: 100vw; 
+  padding-top: 20px;
+  box-shadow: 0 0 10px rgb(94, 90, 85);
+  background-color: rgb(145, 134, 120);
+  border-style: groove;
+  border-width: 7px;
+  border-color: rgb(192, 168, 137);
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
+
 
 .card-image {
   width: 200px;
