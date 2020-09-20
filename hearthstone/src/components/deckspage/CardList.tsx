@@ -25,12 +25,12 @@ function CardList(props:Props){
           {cardList ? cardList.map((card:Card) => {
             return (
               <li key={card.id}>
-                <div className='card-container'>
+                <div className='card-container' 
+                onMouseOver={()=> {setCardSource(card.image)}}  
+                onClick = {()=> {setCard(card)}}
+                  onMouseLeave={()=> {setCardSource('')}} >
                   <div className='card-cost'>{card.manaCost}</div>
-                  <p className='card-name' 
-                  onMouseOver={()=> {setCardSource(card.image)}} 
-                  onClick = {()=> {setCard(card)}}
-                  ><span className={`rarity-${card.rarityId}`} >{card.name}</span></p>
+                  <p className='card-name'><span className={`rarity-${card.rarityId}`} >{card.name}</span></p>
                 </div>
               </li>
             )

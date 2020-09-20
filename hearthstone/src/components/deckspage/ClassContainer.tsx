@@ -12,7 +12,7 @@ const ClassContainer = (props: ClickEvent) => {
       <div className='class-flex'>
         {/* DEMON HUNTER */}
         <div className='class-div'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600527983/pngwave_36_kxawux.png' className='class-icon' alt='druid' onClick={() => {
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619777/pngwave_41_iywqvs.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('demonhunter')
           }} />
           <p className='class-name class-DH'>Demon Hunter</p>
@@ -28,7 +28,7 @@ const ClassContainer = (props: ClickEvent) => {
 
             {/* HUNTER */}
             <div className='class-div'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600527983/pngwave_36_kxawux.png' className='class-icon' alt='druid' onClick={() => {
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619977/pngwave_47_nxx7ek.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('hunter')
           }} />
           <p className='class-name class-hunter'>Hunter</p>
@@ -36,7 +36,7 @@ const ClassContainer = (props: ClickEvent) => {
 
             {/* MAGE */}
             <div className='class-div'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600527983/pngwave_36_kxawux.png' className='class-icon' alt='druid' onClick={() => {
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619776/pngwave_38_u1lb0w.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('mage')
           }} />
           <p className='class-name class-mage'>Mage</p>
@@ -44,7 +44,7 @@ const ClassContainer = (props: ClickEvent) => {
 
             {/* PALADIN */}
             <div className='class-div'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600527983/pngwave_36_kxawux.png' className='class-icon' alt='druid' onClick={() => {
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619776/pngwave_40_rnhr5h.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('paladin')
           }} />
           <p className='class-name class-paladin'>Paladin</p>
@@ -52,7 +52,7 @@ const ClassContainer = (props: ClickEvent) => {
 
             {/* PRIEST */}
             <div className='class-div'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600527983/pngwave_36_kxawux.png' className='class-icon' alt='druid' onClick={() => {
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619775/pngwave_42_lpeyyy.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('priest')
           }} />
           <p className='class-name class-priest'>Priest</p>
@@ -60,7 +60,7 @@ const ClassContainer = (props: ClickEvent) => {
 
             {/* ROGUE */}
             <div className='class-div'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600527983/pngwave_36_kxawux.png' className='class-icon' alt='druid' onClick={() => {
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619775/pngwave_43_hykjyb.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('rogue')
           }} />
           <p className='class-name class-rogue'>Rogue</p>
@@ -68,7 +68,7 @@ const ClassContainer = (props: ClickEvent) => {
 
             {/* SHAMAN */}
             <div className='class-div'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600527983/pngwave_36_kxawux.png' className='class-icon' alt='druid' onClick={() => {
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619775/pngwave_44_fmegk4.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('shaman')
           }} />
           <p className='class-name class-shaman'>Shaman</p>
@@ -76,7 +76,7 @@ const ClassContainer = (props: ClickEvent) => {
 
             {/* WARLOCK */}
             <div className='class-div'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600527983/pngwave_36_kxawux.png' className='class-icon' alt='druid' onClick={() => {
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619976/pngwave_46_cwxzgi.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('warlock')
           }} />
           <p className='class-name class-warlock'>Warlock</p>
@@ -84,7 +84,7 @@ const ClassContainer = (props: ClickEvent) => {
 
             {/* WARRIOR */}
             <div className='class-div'>
-          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600527983/pngwave_36_kxawux.png' className='class-icon' alt='druid' onClick={() => {
+          <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600619775/pngwave_39_w6jjof.png' className='class-icon' alt='druid' onClick={() => {
             props.classSelected('warrior')
           }} />
           <p className='class-name class-warrior'>Warrior</p>

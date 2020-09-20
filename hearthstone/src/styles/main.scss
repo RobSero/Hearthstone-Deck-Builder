@@ -1,11 +1,15 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Grandstander', cursive;
+      color: rgb(70, 53, 29);
 }
 // BORDER STYLING
 
 #left-border, #right-border, #top-border, #bottom-border {
-  background-color: green;
+  background-color: rgb(104, 74, 56);
+  background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
+  // box-shadow: 0 0 10px grey;
   position: fixed;
 }
 
@@ -41,8 +45,8 @@ body {
 }
 
 .background-standard {
-  background-color: rgb(228, 216, 192);
-}
+  background-color: rgb(202, 188, 160);
+  background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");}
 
 
 //  GAME CLASS COLOURS

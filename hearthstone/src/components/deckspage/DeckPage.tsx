@@ -4,6 +4,7 @@ import {getCardData} from '../../lib/api'
 import CardList from './CardList'
 import ComparisonZone from './ComparisonZone'
 import UserCardList from './UserCardList'
+import CardPopup from './CardPopup'
 
 interface CardDetails {
   id: number,
@@ -63,7 +64,7 @@ return (
       <div id='bottom-border'></div>
       <div className='page-container background-standard'>
         {/* CARD IMAGE POPUP */}
-        <img src={cardPopUpSource} className='card-popup' />
+        <CardPopup cardPopUpSource={cardPopUpSource} />
         {/* CLASSES SECTION */}
      <ClassContainer classSelected = {classSelected} />
 

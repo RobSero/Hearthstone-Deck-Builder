@@ -24,12 +24,12 @@ function UserCardList(props:Props){
           {userDeck ? userDeck.map((card:Card) => {
             return (
               <li key={Math.random()}>
-                <div className='card-container'>
+                <div className='card-container' 
+                onMouseOver={()=> {setCardSource(card.image)}} 
+                  onMouseLeave={()=> {setCardSource('')}} 
+                  onClick = {()=> {setUserCard(card)}}>
                   <div className='card-cost'>{card.manaCost}</div>
-                  <p className='card-name' 
-                  onMouseOver={()=> {setCardSource(card.image)}} 
-                  onClick = {()=> {setUserCard(card)}}
-                  ><span className={`rarity-${card.rarityId}`} >{card.name}</span></p>
+                  <p className='card-name' ><span className={`rarity-${card.rarityId}`} >{card.name}</span></p>
                 </div>
               </li>
             )

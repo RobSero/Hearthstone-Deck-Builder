@@ -1,8 +1,17 @@
 .class-container {
   text-align: center;
 
+  .class-div {
+    transition: all 1s ease;
+  }
+
+  .class-div:hover {
+    cursor: pointer;
+  }
+
   .class-title {
     margin: 5px;
+    margin-top: 10px;
   }
 
   .class-flex {
@@ -14,8 +23,16 @@
     .class-name {
       margin: 0;
     }
+
     .class-icon {
-      width: 70px;
+      height: 70px;
+      position: relative;
+      transition: top ease 0.2s;
+      top: 0;
+
+      &:hover {
+        top: -7px;
+      }
     }
   }
 }
@@ -23,11 +40,18 @@
 .decks-flex {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 15px;
 }
 
 //  CARD LIST SECTION
 
 .card-list-container {
+  box-shadow: 0 0 10px rgb(94, 90, 85);
+  background-color: rgb(145, 134, 120);
+  border-style: groove;
+  border-width: 7px;
+  border-color: rgb(192, 168, 137);
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
   width: 25%;
   text-align: center;
   display: inline-block;
@@ -37,12 +61,24 @@
   text-align: left;
   height: 400px;
   overflow-y: scroll;
+  list-style-type: none;
+  padding: 2px;
 }
 
 .card-container {
-  background-color: rgb(182, 143, 117);
+
   padding: 5px;
   margin: 2px;
+  box-shadow: 0 0 10px rgb(155, 145, 133);
+  background-color: rgb(119, 105, 87);
+  border-style: groove;
+  border-width: 7px;
+  border-color: rgb(192, 168, 137);
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 
@@ -53,14 +89,19 @@
   margin: 20px;
   margin-top: 60px;
   display: flex;
-  background-color: rgb(170, 130, 104);
+  box-shadow: 0 0 10px rgb(94, 90, 85);
+  background-color: rgb(145, 134, 120);
+  border-style: groove;
+  border-width: 7px;
+  border-color: rgb(192, 168, 137);
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
+
   justify-content: space-evenly;
   flex-wrap: nowrap;
   height: 350px;
   align-items: center;
 
   .card-compare {
-    background-color: brown;
     width: 40%;
 
     .main-card {
@@ -69,7 +110,15 @@
     }
   }
 
-  .central-info {
-    text-align: center;
+  .select-arrow {
+    position: relative;
+    top: 0;
+    transition: top ease 0.2s;
+    width: 100px;
+
+    &:hover {
+      top: -7px;
+      cursor: pointer;
+    }
   }
 }

@@ -20,17 +20,23 @@
 
 
 .card-cost {
-  background-color: blue;
-  color: white;
-  width: 23px;
-  height: 23px;
+  background-image: url('https://res.cloudinary.com/dy7eycl8m/image/upload/v1600621382/pngwave_48_hfjlda.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: rgb(70, 67, 67);
+  width: 30px;
+  height: 30px;
   text-align: center;
   display: inline-block;
+  padding-top: 8px;
 }
 
 .card-name {
   display: inline-block;
   margin: 5px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .no-card {
@@ -43,4 +49,6 @@
 .card-popup {
   position: fixed;
   height: 400px;
+  pointer-events:none;
+  z-index: 5;
 }

@@ -28,8 +28,9 @@ function ComparisonZone(props:Props){
         
       </div>
       <div className='central-info'>
-        <p onClick={()=> {props.addCard(props.selectedCard)}}>add to deck</p>
-        <p onClick={()=> {props.removeCard(props.selectedUserCard)}}>remove deck</p>
+        <img onClick={()=> {props.removeCard(props.selectedCard)}} src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600614566/redarrow_r1igpx.png' className='select-arrow' />
+        <br />
+        <img onClick={()=> {props.addCard(props.selectedCard)}} src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600614566/greenarrow_pe24eu.png' className='select-arrow' />
       </div>
       <div className='card-compare'>
       {!props.selectedUserCard.image? 
