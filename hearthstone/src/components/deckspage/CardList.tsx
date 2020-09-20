@@ -4,7 +4,8 @@ import React from 'react'
 interface Props {
   cardList: Card[],
   selectedClass: string,
-  setCardSource(image:string): void
+  setCardSource(image:string): void,
+  setCard(card:object): void
 }
 
 interface Card {
@@ -16,7 +17,7 @@ interface Card {
 }
 
 function CardList(props:Props){
-    const {cardList, selectedClass, setCardSource} = props
+    const {cardList, selectedClass, setCardSource,setCard} = props
     return (
       <div className='card-list-container'>
         <h3 className='card-list-title'>Available <span className={`class-${selectedClass.toLowerCase()}`}>{selectedClass}</span> Cards</h3>
@@ -24,11 +25,12 @@ function CardList(props:Props){
           {cardList ? cardList.map((card:Card) => {
             return (
               <li key={card.id}>
-                <div className='card-container' >
+                <div className='card-container'>
                   <div className='card-cost'>{card.manaCost}</div>
-                  <p className='card-name' onMouseOver={()=> {
-                    setCardSource(card.image)
-                  }}><span className={`rarity-${card.rarityId}`} >{card.name}</span></p>
+                  <p className='card-name' 
+                  onMouseOver={()=> {setCardSource(card.image)}} 
+                  onClick = {()=> {setCard(card)}}
+                  ><span className={`rarity-${card.rarityId}`} >{card.name}</span></p>
                 </div>
               </li>
             )

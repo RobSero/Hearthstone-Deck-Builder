@@ -16,26 +16,8 @@
   color: rgb(192, 135, 11);
 }
 
-.card-list-container {
-  width: 400px;
-  text-align: center;
-  
-  .card-list-title {
-    
-  }
-}
 
-.card-list {
-  text-align: left;
-  height: 400px;
-  overflow-y: scroll;
-}
 
-.card-container {
-  background-color: rgb(182, 143, 117);
-  padding: 5px;
-  margin: 2px;
-}
 
 .card-cost {
   background-color: blue;
@@ -49,6 +31,10 @@
 .card-name {
   display: inline-block;
   margin: 5px;
+}
+
+.no-card {
+  opacity: 0.5;
 }
 
 

@@ -19,3 +19,57 @@
     }
   }
 }
+
+.decks-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+//  CARD LIST SECTION
+
+.card-list-container {
+  width: 25%;
+  text-align: center;
+  display: inline-block;
+}
+
+.card-list {
+  text-align: left;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.card-container {
+  background-color: rgb(182, 143, 117);
+  padding: 5px;
+  margin: 2px;
+}
+
+
+// CARD COMPARISON SECTION
+
+.comparison-zone {
+  width: 40%;
+  margin: 20px;
+  margin-top: 60px;
+  display: flex;
+  background-color: rgb(170, 130, 104);
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  height: 350px;
+  align-items: center;
+
+  .card-compare {
+    background-color: brown;
+    width: 40%;
+
+    .main-card {
+      width: 100%;
+
+    }
+  }
+
+  .central-info {
+    text-align: center;
+  }
+}
