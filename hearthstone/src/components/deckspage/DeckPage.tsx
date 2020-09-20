@@ -1,6 +1,7 @@
 import React from 'react'
 import ClassContainer from './ClassContainer'
 import {getCardData} from '../../lib/api'
+import CardList from './CardList'
 
 interface CardDetails {
   name: string
@@ -8,7 +9,7 @@ interface CardDetails {
 
 
 const DeckPage: React.FC = () => {
-const [cardList, setCards] = React.useState([{name:'', manaCost: '', rarityId: 1, image: ''}])
+const [cardList, setCards] = React.useState([{id: 0, name:'', manaCost: 0, rarityId: 1, image: ''}])
 const [selectedClass, setClass] = React.useState('none')
 const [cardPopUpSource, setCardSource] = React.useState('')
 
@@ -39,21 +40,7 @@ return (
      <ClassContainer classSelected = {classSelected} />
 
     {/* CARD LIST SECTION */}
-    <div className='card-list-container'>
-      <h3 className='card-list-title'>Available <span className={`class-${selectedClass.toLowerCase()}`}>{selectedClass}</span> Cards</h3>
-    <ul className='card-list'>
-      {cardList? cardList.map(card => {
-        return (
-          <li>
-          <div className='card-container' >
-        <div className='card-cost'>{card.manaCost}</div>
-          <p className='card-name' onMouseOver={()=> {setCardSource(card.image)}}><span className={`rarity-${card.rarityId}`} >{card.name}</span></p>
-          </div>
-          </li>
-        )
-      }): ''} 
-    </ul>
-    </div>
+    <CardList cardList={cardList} selectedClass={selectedClass} setCardSource={setCardSource} />
 
       </div>
   </div>
