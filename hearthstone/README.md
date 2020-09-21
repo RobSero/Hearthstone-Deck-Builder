@@ -32,7 +32,7 @@ This application is designed as a companion to the popular card game Hearthstone
 
 ### Deployed version
 
-https://search-and-play.netlify.app/
+https://master.d6di1xshwx3x0.amplifyapp.com/
 
 ## 3.0 - Code Installation
 
