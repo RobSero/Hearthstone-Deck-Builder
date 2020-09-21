@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 interface Props {
   cardList: Card[],
   selectedClass: string,
@@ -22,10 +21,12 @@ function CardList(props:Props){
       <div className={selectedClass? 'card-list-container animate__animated animate__fadeInLeft':'card-list-container hide' }>
         <h3 className='card-list-title'>Available <span className={`class-${selectedClass.toLowerCase()}`}>{selectedClass}</span> Cards</h3>
         <ul className='card-list'>
+          {/* CARD LIST ITEMS */}
           {cardList ? cardList.map((card:Card) => {
             return (
               <li key={card.id}>
-                <div className='card-container  list-background' 
+                <div 
+                className='card-container  list-background' 
                 onMouseOver={()=> {setCardSource(card.image)}}  
                 onClick = {()=> {setCard(card)}}
                   onMouseLeave={()=> {setCardSource('')}} >

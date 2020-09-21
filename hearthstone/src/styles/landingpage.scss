@@ -15,6 +15,8 @@
   }
 }
 
+//  ------------------ SPEECH BUBBLES ---------------------
+
 .speech {
   position: fixed;
   width: 300px;
@@ -68,7 +70,7 @@
 }
 
 
-// LOWER PAGE MOUSEMOVE EFFECT
+// ------------------- LOWER PAGE MOUSEMOVE EFFECT -------------------------
 
 .left-view {
   background-image: url('https://res.cloudinary.com/dy7eycl8m/image/upload/v1600627381/pngwave_52_cbhh2j.png');
@@ -113,6 +115,7 @@
   }
 }
 
+// ---------------------  RIGHT SIDE CARD SLIDER -------------------------
 
 .right-view {
   z-index: -2;
@@ -128,13 +131,7 @@
 }
 
 
-
-
-
-
-//  ANIMATED BACKGROUND
-
-
+// -------------------- ANIMATED BACKGROUND -------------------------
 
 @keyframes shrink {
   0% {

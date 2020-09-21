@@ -1,3 +1,5 @@
+
+//  --------------- SELECT CLASS SECTION ---------------------
 .class-container {
   text-align: center;
 
@@ -38,13 +40,15 @@
   }
 }
 
+//  --------------- DECK BUILDER SECTION ---------------------
+
 .decks-flex {
   display: flex;
   justify-content: space-evenly;
   margin-top: 15px;
 }
 
-//  CARD LIST SECTION
+//  --------------- CARD LIST CONTAINERS ---------------------
 
 .card-list-container {
   box-shadow: 0 0 10px rgb(94, 90, 85);
@@ -63,6 +67,7 @@
   }
 }
 
+//  --------------- CARD LIST ---------------------
 .card-list {
   text-align: left;
   height: 90%;
@@ -71,8 +76,9 @@
   padding: 2px;
 }
 
-.card-container {
+//  ---------- LIST ITEMS ---------------------
 
+.card-container {
   padding: 5px;
   margin: 2px;
   transition: all 1s ease;
@@ -81,7 +87,7 @@
   }
 }
 
-// CARD COMPARISON SECTION
+// ----------------  CARD COMPARISON SECTION   ------------------
 
 .comparison-zone {
   width: 40%;
@@ -124,6 +130,9 @@
   }
 }
 
+
+//  --------------- NOTIFICATIONS ---------------------
+
 .warning-text {
   text-align: center;
   padding: 100px 20px
@@ -132,6 +141,11 @@
 .custom-class-notification {
   color: white;
 }
+
+
+
+
+// --------------- LARGER SCREENS -----------------
 
 @media only screen and (min-width: 1600px) {
   .comparison-zone {
