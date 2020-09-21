@@ -24,7 +24,7 @@ const LandingPage: React.FC = () => {
           <img src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600526924/logo_je8112.png' alt='logo' className='main-logo animate__zoomInUp animate__animated' />
           <h1 className='logo-subheader'>Super Quick Deck Builder</h1>
         </div>
-
+<div className='lower-landing background-standard'>
         <div className='left-view' style={{ width: mouseXposition }}>
           <div className='character-flex'>
             <img id='char1' className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600523790/testChar_k5dhho.png' alt='hearthstone character' />
@@ -32,10 +32,10 @@ const LandingPage: React.FC = () => {
             <img id='char3' className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600627905/pngwave_55_xx49zi.png' alt='hearthstone character' />
             <img id='char4' className='characters animate__bounceInUp animate__animated'src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600627906/pngwave_54_pkklmq.png' alt='hearthstone character' />
            
-            
+            </div>     
           </div>
 
-        </div>
+       
 
         <div className='right-view'>
         
@@ -50,7 +50,7 @@ const LandingPage: React.FC = () => {
             <img className={parseInt(mouseXposition) < 100? 'card-image animate__bounceInRight animate__animated' : 'card-image animate__bounceOutRight animate__animated' } src='https://res.cloudinary.com/dy7eycl8m/image/upload/v1600525467/cardTest_jeynmb.png' /> 
           </div>
         </div>
-
+        </div>
       
     </div>
   )

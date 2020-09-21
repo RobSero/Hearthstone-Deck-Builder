@@ -4,6 +4,26 @@ body {
   font-family: 'Grandstander', cursive;
       color: rgb(70, 53, 29);
   overflow: hidden;
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(70, 53, 29); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #745937; 
+  }
 }
 // BORDER STYLING
 
@@ -49,6 +69,7 @@ body {
 // PAGE CONTAINER STYLING
 .page-container {
   padding: 50px;
+  height: 100vh;
 }
 
 .background-standard {

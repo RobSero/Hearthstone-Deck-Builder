@@ -32,6 +32,7 @@ const [userDeck, setUserDeck] = React.useState<CardDetails[]>([{id: 0, name:'', 
 const classSelected = async(e:string) => {
   setUserDeck([])
   setCard({id: 0, name:'', manaCost: 0, rarityId: 1, image: ''})
+  setUserCard({id: 0, name:'', manaCost: 0, rarityId: 1, image: ''})
   console.log(e);
   try {
     const res = await getCardData(e)

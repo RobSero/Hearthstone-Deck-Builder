@@ -1,5 +1,5 @@
 .landing-header {
-  height: 300px;
+  height: 50%;
   background-color: rgb(167, 137, 104);
   background-image: url("https://res.cloudinary.com/dy7eycl8m/image/upload/v1600622071/pngwave_49_uvoxyj.png");
   text-align: center;
@@ -8,6 +8,7 @@
   z-index: 4;
   .main-logo {
     height: 150px;
+    margin-top: 5%;
   }
   .logo-subheader {
     color: white;
@@ -36,7 +37,7 @@
   font-size: 16px;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 60%;
   width: 150px;
   background-color: rgb(236, 197, 22);
   z-index: 10;
@@ -53,22 +54,35 @@
   }
 }
 
+.lower-landing {
+  height: 50%;
+  box-shadow: 0 0 10px rgb(94, 90, 85);
+  // background-color: rgb(145, 134, 120);
+  border-style: groove;
+  border-width: 7px;
+  border-color: rgb(192, 168, 137);
+  background-image: url("https://res.cloudinary.com/dy7eycl8m/image/upload/v1600680986/pngwave_58_djsmnk.png");
+  background-size: auto;
+  animation: shrink 5s infinite alternate;
+  background-repeat: repeat;
+}
+
 
 // LOWER PAGE MOUSEMOVE EFFECT
 
 .left-view {
   background-image: url('https://res.cloudinary.com/dy7eycl8m/image/upload/v1600627381/pngwave_52_cbhh2j.png');
-  // background-size: cover;
+  background-size: auto;
   animation: shrink 5s infinite alternate;
-  background-repeat: no-repeat;
-  height: 400px;
+  background-repeat: repeat;
+  height: 100%;
   float: left;
   overflow: hidden;
   z-index: -1;
   white-space:nowrap;
   transition: all 0.5s ease;
   box-shadow: inset 0 0 200px rgb(158, 4, 4);
-
+  padding: 0;
   border-right: groove;
   border-width: 7px;
   border-color: rgb(192, 168, 137);
@@ -88,7 +102,7 @@
       bottom: 0;
     }
     #char1 {
-      width:280px
+      width:300px
     }
     #char3 {
       width:300px
@@ -102,19 +116,14 @@
 
 .right-view {
   z-index: -2;
-  height: 400px;
-  width: 100vw; 
+  height: 100%;
+  display: inline;
   padding-top: 20px;
-  box-shadow: 0 0 10px rgb(94, 90, 85);
-  background-color: rgb(145, 134, 120);
-  border-style: groove;
-  border-width: 7px;
-  border-color: rgb(192, 168, 137);
-  background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
 
 
 .card-image {
   width: 200px;
+  margin-top: 15px;
 }
 }
 
@@ -133,5 +142,14 @@
   }
   100% {
     background-position: 30% 100%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .right-view {
+  .card-image {
+    width: 200px;
+    margin-top: 80px;
+  }
   }
 }
