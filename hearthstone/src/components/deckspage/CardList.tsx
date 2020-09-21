@@ -25,7 +25,7 @@ function CardList(props:Props){
           {cardList ? cardList.map((card:Card) => {
             return (
               <li key={card.id}>
-                <div className='card-container' 
+                <div className='card-container  list-background' 
                 onMouseOver={()=> {setCardSource(card.image)}}  
                 onClick = {()=> {setCard(card)}}
                   onMouseLeave={()=> {setCardSource('')}} >

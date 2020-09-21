@@ -12,6 +12,7 @@
   .class-title {
     margin: 5px;
     margin-top: 10px;
+    padding-top: 5px;
   }
 
   .class-flex {
@@ -56,6 +57,9 @@
   text-align: center;
   display: inline-block;
   transition: all 0.5s ease;
+  .card-list-title {
+    margin-top: 5px;
+  }
 }
 
 .card-list {
@@ -70,13 +74,7 @@
 
   padding: 5px;
   margin: 2px;
-  box-shadow: 0 0 10px rgb(155, 145, 133);
-  background-color: rgb(119, 105, 87);
-  border-style: groove;
-  border-width: 7px;
-  border-color: rgb(192, 168, 137);
-  background-image: url("https://www.transparenttextures.com/patterns/checkered-light-emboss.png");
-
+  transition: all 1s ease;
   &:hover {
     cursor: pointer;
   }
@@ -106,7 +104,10 @@
 
     .main-card {
       width: 100%;
-
+      transition: all 1s ease;
+    }
+    .no-card {
+      transform: scale(0.9);
     }
   }
 
@@ -126,4 +127,8 @@
 .warning-text {
   text-align: center;
   padding: 100px 20px
+}
+
+.custom-class-notification {
+  color: white;
 }

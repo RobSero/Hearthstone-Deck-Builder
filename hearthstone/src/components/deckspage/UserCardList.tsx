@@ -34,10 +34,12 @@ function UserCardList(props:Props){
           {userDeck.length !== 0 ? userDeck.map((card:Card) => {
             return (
               <li key={Math.random()}>
-                <div className='card-container' 
+                <div className='card-container list-background' 
                 onMouseOver={()=> {setCardSource(card.image)}} 
                   onMouseLeave={()=> {setCardSource('')}} 
-                  onClick = {()=> {setUserCard(card)}}>
+                  onClick = {()=> {setUserCard(card)}}
+                  style={newCardAnimate? animateCard : removeAnimate}
+                  >
                   <div className='card-cost'>{card.manaCost}</div>
                   <p className='card-name' ><span className={`rarity-${card.rarityId}`} >{card.name}</span></p>
                 </div>
@@ -54,6 +56,11 @@ const animateFlash = {
   boxShadow: "0 0 40px white"
 }
 const removeAnimate = {}
+
+const animateCard = {
+  transform: 'scale(1.02)',
+  boxShadow: "0 0 10px white"
+}
 
 
 export default UserCardList

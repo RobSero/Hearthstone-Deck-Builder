@@ -6,8 +6,8 @@ import ComparisonZone from './ComparisonZone'
 import UserCardList from './UserCardList'
 import CardPopup from './CardPopup'
 import Borders from '../common/Borders'
-
-
+import { Alert } from 'antd';
+import openNotification from '../common/Notification'
 
 
 interface CardDetails {
@@ -15,7 +15,8 @@ interface CardDetails {
   manaCost: number,
   image: string,
   rarityId: number,
-  name: string
+  name: string,
+  cardTypeId? : number
 }
 
 
@@ -30,10 +31,14 @@ const [userDeck, setUserDeck] = React.useState<CardDetails[]>([{id: 0, name:'', 
 
 const classSelected = async(e:string) => {
   setUserDeck([])
+  setCard({id: 0, name:'', manaCost: 0, rarityId: 1, image: ''})
   console.log(e);
   try {
     const res = await getCardData(e)
-    const cleanedCardList = res.data.cards.map((card:CardDetails) => {
+    const filteredList = res.data.cards.filter((card:CardDetails) => {
+      return card.cardTypeId !== 3
+    })
+    const cleanedCardList = filteredList.map((card:CardDetails) => {
       return {
         id: card.id,
         name: card.name,
@@ -50,16 +55,26 @@ const classSelected = async(e:string) => {
 }
 
 const addCard = (newCard:CardDetails) => {
-  setUserDeck([...userDeck, newCard])
+  const counter = userDeck.filter(card => {
+    return card.name === newCard.name
+  })
+  if (counter.length > 1) {
+    openNotification()
+  } else {
+    setUserDeck([...userDeck, newCard])
+  }
 }
 
 const removeCard = (removedCard:CardDetails) => {
     const removedCardIndex = userDeck.findIndex((card)=> {return card.id === removedCard.id})
     console.log(removedCardIndex);
     const newUserDeck = userDeck.filter((card,index) => {
-      return  index !== removedCardIndex
+      return index !== removedCardIndex
     })
-    setUserDeck(newUserDeck)
+setUserDeck(newUserDeck)
+if(newUserDeck.findIndex((card)=> {return card.id === removedCard.id}) === -1) {
+  setUserCard({id: 0, name:'', manaCost: 0, rarityId: 1, image: ''})
+}
 }
 
 
@@ -67,6 +82,7 @@ return (
   <div>
      <Borders />
       <div className='page-container background-standard'>
+        <div className='border-shadow'>
         {/* CARD IMAGE POPUP */}
         <CardPopup cardPopUpSource={cardPopUpSource} />
         {/* CLASSES SECTION */}
@@ -81,12 +97,10 @@ return (
     </div>
    
       </div>
+      </div>
   </div>
 )
 }
 
 export default DeckPage
 
-
-//  click on class to fire function
-// function get 
