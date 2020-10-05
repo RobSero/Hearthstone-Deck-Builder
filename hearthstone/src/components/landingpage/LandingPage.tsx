@@ -23,7 +23,6 @@ const LandingPage: React.FC = () => {
       <SpeechTwo />
       {/* START BUTTON */}
       <Link to='/decks' className='start-button'>Start Building</Link>
-
       {/* UPPER LANDING PAGE SECTION */}
 
       <div className='page-container'>
